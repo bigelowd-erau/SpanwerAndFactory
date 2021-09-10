@@ -6,4 +6,9 @@ public class Enemy : MonoBehaviour, iCopyable
     {
         return Instantiate(this);
     }
+
+    public iCopyable Create()
+    {
+        return Instantiate(Resources.Load<Enemy>("Prefabs/" + this.name));
+    }
 }

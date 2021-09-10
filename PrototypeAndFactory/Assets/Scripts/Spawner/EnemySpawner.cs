@@ -9,4 +9,10 @@ public class EnemySpawner : MonoBehaviour
         m_Copy = prototype.Copy();
         return (Enemy)m_Copy;
     }
+
+    public Enemy LoadEnemy(Enemy type)
+    {
+        m_Copy = type.Create();
+        return (Enemy)m_Copy;
+    }
 }
